@@ -25,11 +25,11 @@ router.post('/burger/create', function (req, res)
 });
 
 // Devour a Burger
-router.post('/burger/eat/:id', function (req, res) 
-{
+router.put('/burger/eat/:id', function (req, res) 
+{ console.log('Hey');
   burger.update(req.params.id, function() 
   {
-    res.redirect('/');
+    res.sendStatus(200);
   });
 });
 
